@@ -1,0 +1,37 @@
+name: Deploy CodeChavez Repository Pattern NuGet
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET (use global.json)
+        uses: actions/setup-dotnet@v4
+
+      - name: ls
+        run: ls
+
+      - name: ls src
+        run: ls src
+
+      # - name: Restore dependencies
+      #   run: dotnet restore **/src/CodeChavez.Repository.Pattern/CodeChavez.Repository.Pattern.csproj --configfile nuget.config --no-cache
+
+      # - name: Build project
+      #   run: dotnet build **/codechavez.repository.pattern/CodeChavez.Repository.Pattern.csproj --configuration Release
+
+      # - name: Package Common
+      #   run: dotnet pack **/codechavez.repository.pattern/CodeChavez.Repository.Pattern.csproj --configuration Release --no-build --output ./artifacts1
+
+      # - name: Push NuGet package
+      #   run: dotnet nuget push "./artifacts1/*.nupkg" --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
+      #   env:
+      #     NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }}

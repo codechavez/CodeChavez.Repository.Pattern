@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChavez.Repository.Pattern", "src\CodeChavez.Repository.Pattern\CodeChavez.Repository.Pattern.csproj", "{16F00C24-5EE1-4250-8EDA-3BFA637E6F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChavez.Repository.Pattern.Postgres", "src\CodeChavez.Repository.Pattern.Postgres\CodeChavez.Repository.Pattern.Postgres.csproj", "{B0284CED-7A82-417B-BFFD-E1B3FC354FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChavez.Repository.Pattern.MongoDB", "src\CodeChavez.Repository.Pattern.MongoDB\CodeChavez.Repository.Pattern.MongoDB.csproj", "{87DBC4E1-BEFA-4137-9CCF-A3BF452BBEB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16F00C24-5EE1-4250-8EDA-3BFA637E6F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16F00C24-5EE1-4250-8EDA-3BFA637E6F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16F00C24-5EE1-4250-8EDA-3BFA637E6F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16F00C24-5EE1-4250-8EDA-3BFA637E6F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0284CED-7A82-417B-BFFD-E1B3FC354FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0284CED-7A82-417B-BFFD-E1B3FC354FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0284CED-7A82-417B-BFFD-E1B3FC354FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0284CED-7A82-417B-BFFD-E1B3FC354FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87DBC4E1-BEFA-4137-9CCF-A3BF452BBEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DBC4E1-BEFA-4137-9CCF-A3BF452BBEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DBC4E1-BEFA-4137-9CCF-A3BF452BBEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DBC4E1-BEFA-4137-9CCF-A3BF452BBEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {760CF65A-7C43-4CAB-B8C0-2F463CEFAE43}
+	EndGlobalSection
+EndGlobal

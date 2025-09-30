@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageId>CodeChavez.Repository.Pattern.Postgres</PackageId>
+		<Title>CodeChavez Repository Pattern Postgres Library</Title>
+		<Authors>Victor A Chavez</Authors>
+		<Product>CodeChavez.Repository.Pattern.Postgres</Product>
+		<Version>9.0.0</Version>
+		<Copyright>2020-2025</Copyright>
+		<Description>Has some useful extension and utilities that allow for every day development</Description>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/codechavez/codechavez.repository.pattern</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/codechavez/codechavez.repository.pattern</RepositoryUrl>
+		<PackageLicenseFile></PackageLicenseFile>
+		<PackageTags>CodeChavez,Repository,Pattern,Postgres,Common,Helpers,Utilities,.net</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="9.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\codechavez.repository.pattern\CodeChavez.Repository.Pattern.csproj" />
+	</ItemGroup>
+
+</Project>
