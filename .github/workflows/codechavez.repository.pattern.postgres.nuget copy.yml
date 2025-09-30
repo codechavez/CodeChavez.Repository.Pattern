@@ -29,9 +29,9 @@ jobs:
         run: dotnet build **/CodeChavez.Repository.Pattern.Postgres/CodeChavez.Repository.Pattern.Postgres.csproj --configuration Release
 
       - name: Package 
-        run: dotnet pack **/CodeChavez.Repository.Pattern.Postgres/CodeChavez.Repository.Pattern.Postgres.csproj --configuration Release --no-build --output ./artifacts2
+        run: dotnet pack **/CodeChavez.Repository.Pattern.Postgres/CodeChavez.Repository.Pattern.Postgres.csproj --configuration Release --no-build --output ./artifacts3
 
       - name: Push NuGet package
-        run: dotnet nuget push "./artifacts2/*.nupkg" --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push "./artifacts3/*.nupkg" --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }}
