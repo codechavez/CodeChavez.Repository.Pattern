@@ -1,4 +1,4 @@
-name: Deploy CodeChavez Repository Pattern NuGet
+name: Repository Pattern Postgres NuGet
 
 on:
   push:
