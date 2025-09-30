@@ -22,8 +22,8 @@ jobs:
       - name: ls src
         run: ls src
 
-      # - name: Restore dependencies
-      #   run: dotnet restore **/src/CodeChavez.Repository.Pattern/CodeChavez.Repository.Pattern.csproj --configfile nuget.config --no-cache
+      - name: Restore dependencies
+        run: dotnet restore **/CodeChavez.Repository.Pattern/CodeChavez.Repository.Pattern.csproj --configfile nuget.config --no-cache
 
       # - name: Build project
       #   run: dotnet build **/codechavez.repository.pattern/CodeChavez.Repository.Pattern.csproj --configuration Release
