@@ -23,15 +23,15 @@ jobs:
         run: ls src
 
       - name: Restore dependencies
-        run: dotnet restore **/CodeChavez.Repository.Pattern/CodeChavez.Repository.Pattern.csproj --configfile nuget.config --no-cache
+        run: dotnet restore **/CodeChavez.Repository.Pattern.MongoDB/CodeChavez.Repository.Pattern.MongoDB.csproj --configfile nuget.config --no-cache
 
       - name: Build project
-        run: dotnet build **/CodeChavez.Repository.Pattern/CodeChavez.Repository.Pattern.csproj --configuration Release
+        run: dotnet build **/CodeChavez.Repository.Pattern.MongoDB/CodeChavez.Repository.Pattern.MongoDB.csproj --configuration Release
 
       - name: Package 
-        run: dotnet pack **/CodeChavez.Repository.Pattern/CodeChavez.Repository.Pattern.csproj --configuration Release --no-build --output ./artifacts1
+        run: dotnet pack **/CodeChavez.Repository.Pattern.MongoDB/CodeChavez.Repository.Pattern.MongoDB.csproj --configuration Release --no-build --output ./artifacts2
 
       - name: Push NuGet package
-        run: dotnet nuget push "./artifacts1/*.nupkg" --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push "./artifacts2/*.nupkg" --api-key $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }}
