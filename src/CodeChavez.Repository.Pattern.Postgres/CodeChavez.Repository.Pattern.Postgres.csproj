@@ -41,7 +41,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\codechavez.repository.pattern\CodeChavez.Repository.Pattern.csproj" />
+		<ProjectReference Include="..\CodeChavez.Repository.Pattern\CodeChavez.Repository.Pattern.csproj" />
 	</ItemGroup>
 
 </Project>
