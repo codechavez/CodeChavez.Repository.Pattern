@@ -1,7 +1,7 @@
 ﻿using CodeChavez.Common.Extensions;
 using CodeChavez.Repository.Pattern.Extensions;
 using CodeChavez.Repository.Pattern.Interfaces;
-using MediatR;
+using CodeChavez.M3diator.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Bson;
 using System.Linq.Expressions;
@@ -11,13 +11,13 @@ namespace CodeChavez.Repository.Pattern.MongoDB;
 public class MongoRepository<TEntity> : INoSQLRepository<TEntity> where TEntity : DomainDocument
 {
     private readonly DbContext _dbContext;
-    private readonly IMediator _mediator;
+    private readonly IM3diator _mediator;
     private readonly IQueryableCacheService _cache;
 
     public MongoRepository(
         DbContext dbContext,
         IQueryableCacheService cache,
-        IMediator mediator)
+        IM3diator mediator)
     {
         _dbContext = dbContext;
         _mediator = mediator;

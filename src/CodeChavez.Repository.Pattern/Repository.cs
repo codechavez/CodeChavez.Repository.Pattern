@@ -1,7 +1,7 @@
 ﻿using CodeChavez.Common.Extensions;
 using CodeChavez.Repository.Pattern.Extensions;
 using CodeChavez.Repository.Pattern.Interfaces;
-using MediatR;
+using CodeChavez.M3diator.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -10,13 +10,13 @@ namespace CodeChavez.Repository.Pattern;
 public class Repository<TEntity>(DbContext context) : IRepository<TEntity> where TEntity : DomainEntity
 {
     private readonly DbContext _dbcontext = context;
-    private readonly IMediator _mediator;
+    private readonly IM3diator _mediator;
     private readonly IQueryableCacheService _cache;
 
     public Repository(
         DbContext context, 
         IQueryableCacheService cache,
-        IMediator mediator) : this(context)
+        IM3diator mediator) : this(context)
     {
         _dbcontext = context;
         _mediator = mediator;

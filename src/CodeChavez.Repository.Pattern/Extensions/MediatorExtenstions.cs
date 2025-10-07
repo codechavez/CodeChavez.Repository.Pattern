@@ -1,11 +1,11 @@
-﻿using MediatR;
+﻿using CodeChavez.M3diator.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodeChavez.Repository.Pattern.Extensions;
 
 public static class MediatorExtenstions
 {
-    public static async Task DispatchDomainEventsAsync(this IMediator mediator, DbContext dbContext)
+    public static async Task DispatchDomainEventsAsync(this IM3diator mediator, DbContext dbContext)
     {
         var domainEntities = dbContext.ChangeTracker
             .Entries<DomainEntity>()
@@ -23,7 +23,7 @@ public static class MediatorExtenstions
             .ForEach(entity => entity.Entity.ClearDomainEvents());
     }
 
-    public static async Task DispatchDomainEntityEventsAsync<TEntity>(this IMediator mediator, TEntity entity) where TEntity : DomainEntity
+    public static async Task DispatchDomainEntityEventsAsync<TEntity>(this IM3diator mediator, TEntity entity) where TEntity : DomainEntity
     {
         var domainEvents = entity.DomainEvents;
         if (domainEvents != null)
@@ -33,7 +33,7 @@ public static class MediatorExtenstions
         entity.ClearDomainEvents();
     }
 
-    public static async Task DispatchDomainDocumentEventsAsync<TDocument>(this IMediator mediator, TDocument entity) where TDocument : DomainDocument
+    public static async Task DispatchDomainDocumentEventsAsync<TDocument>(this IM3diator mediator, TDocument entity) where TDocument : DomainDocument
     {
         var domainEvents = entity.DomainEvents;
         if (domainEvents != null)

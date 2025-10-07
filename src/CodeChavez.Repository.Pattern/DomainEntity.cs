@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿using CodeChavez.M3diator.Interfaces;
 
 namespace CodeChavez.Repository.Pattern;
 
