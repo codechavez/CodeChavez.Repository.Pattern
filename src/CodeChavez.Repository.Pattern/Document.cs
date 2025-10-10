@@ -10,6 +10,7 @@ public record class Document : IAudit
     public ObjectId Id { get; set; }
 
     public bool IsActive { get; set; } = true;
+    public bool IsDeleted { get; set; } = false;
     public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
     public string? CreatedBy { get; set; }
     public DateTime? ModifiedDate { get; set; } = DateTime.UtcNow;

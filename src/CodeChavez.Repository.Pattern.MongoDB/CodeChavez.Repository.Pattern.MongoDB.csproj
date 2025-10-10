@@ -9,7 +9,7 @@
 		<Title>CodeChavez Repository Pattern MongoDB Library</Title>
 		<Authors>Victor A Chavez</Authors>
 		<Product>CodeChavez.Repository.Pattern.MongoDB</Product>
-		<Version>9.0.1</Version>
+		<Version>9.0.2</Version>
 		<Copyright>2020-2025</Copyright>
 		<Description>Has some useful extension and utilities that allow for every day development</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
