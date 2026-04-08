@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -9,7 +9,7 @@
 		<Title>CodeChavez Repository Pattern Postgres Library</Title>
 		<Authors>Victor A Chavez</Authors>
 		<Product>CodeChavez.Repository.Pattern.Postgres</Product>
-		<Version>9.0.2</Version>
+		<Version>10.0.0-preview1</Version>
 		<Copyright>2020-2025</Copyright>
 		<Description>Has some useful extension and utilities that allow for every day development</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -21,18 +21,18 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.9" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="10.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.9" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.9">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
-		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="9.0.4" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="10.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
