@@ -41,12 +41,9 @@ public class MongoRepository<TEntity> : INoSQLRepository<TEntity> where TEntity 
         if (entities == null)
             throw new ArgumentNullException(nameof(entities));
 
-        if (!entities.Any())
-            throw new ArgumentException("The collection of entities cannot be empty.", nameof(entities));
-
         _dbContext.Set<TEntity>().AddRange(entities);
 
-        _dbContext.Database.AutoTransactionBehavior = AutoTransactionBehavior.WhenNeeded;
+        _dbContext.Database.AutoTransactionBehavior = AutoTransactionBehavior.Never;
         await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
