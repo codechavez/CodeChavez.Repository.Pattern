@@ -28,12 +28,26 @@ public class MongoRepository<TEntity> : INoSQLRepository<TEntity> where TEntity 
     {
         _ = await _dbContext.Set<TEntity>().AddAsync(entity, cancellationToken);
         _dbContext.Database.AutoTransactionBehavior = AutoTransactionBehavior.Never;
-        await _dbContext.SaveChangesAsync();
+        await _dbContext.SaveChangesAsync(cancellationToken);
 
         if (_mediator.IsNotNull())
             await _mediator.DispatchDomainDocumentEventsAsync(entity);
 
         return entity;
+    }
+
+    public async Task AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
+    {
+        if (entities == null)
+            throw new ArgumentNullException(nameof(entities));
+
+        if (!entities.Any())
+            throw new ArgumentException("The collection of entities cannot be empty.", nameof(entities));
+
+        _dbContext.Set<TEntity>().AddRange(entities);
+
+        _dbContext.Database.AutoTransactionBehavior = AutoTransactionBehavior.WhenNeeded;
+        await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public Task<bool> AnyAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
