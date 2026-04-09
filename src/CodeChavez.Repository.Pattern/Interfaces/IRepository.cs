@@ -22,7 +22,7 @@ public interface IRepository<TEntity> where TEntity : DomainEntity
 
 public interface INoSQLRepository<TEntity> where TEntity : DomainDocument
 {
-    Task AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
+    Task AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);
     Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken = default);
     Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken = default);
     Task DeleteAsync<TKey>(TKey id, CancellationToken cancellationToken = default);
