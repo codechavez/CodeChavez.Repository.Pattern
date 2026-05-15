@@ -9,7 +9,7 @@
 		<Title>CodeChavez Repository Pattern Postgres Library</Title>
 		<Authors>Victor A Chavez</Authors>
 		<Product>CodeChavez.Repository.Pattern.Postgres</Product>
-		<Version>10.0.0-preview2</Version>
+		<Version>10.0.0-preview4</Version>
 		<Copyright>2020-2026</Copyright>
 		<Description>Has some useful extension and utilities that allow for every day development</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -21,13 +21,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="10.0.5" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="10.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.8">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.5" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.8">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
